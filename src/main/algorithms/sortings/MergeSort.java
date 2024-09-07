@@ -7,11 +7,14 @@ import java.util.Arrays;
  */
 public class MergeSort {
     /**
-     * Merge Sort is a divide-and-conquer algorithm that works by recursively dividing an array or list into two halves, sorting the two halves independently, and then merging them back together.
+     * Merge Sort is a divide-and-conquer algorithm
+     * that works by recursively dividing an array or list into two halves,
+     * sorting the two halves independently, and then merging them back together.
      * Here are the steps to implement Merge Sort:
      * Divide the list into two halves.
      * Recursively sort the two halves separately using Merge Sort.
-     * Merge the two sorted halves back together by comparing the elements of each half and placing them in the correct order.
+     * Merge the two sorted halves back together by comparing the elements of each half
+     * and placing them in the correct order.
      * Repeat steps 1-3 until the entire list is sorted.
      *
      * @TimeComplexity : O(nlog(n))
