@@ -6,9 +6,7 @@ import java.util.List;
 /**
  * @author amarnath-nitt 24/05/23
  */
-public class TraversalRecursionTechniques {
-    static int sum = 0;
-    static int target = 3;
+public class RecursionTraversal {
     public static void main(String[] args) {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
@@ -18,9 +16,10 @@ public class TraversalRecursionTechniques {
         root.right.right = new TreeNode(6);
 
         List<Integer> resList = new ArrayList<>();
-        sumElementLessThanOrEqualToTarget(root);
+        int[] temp = new int[]{3, 0}; // {target, sum};
+        sumElementLessThanOrEqualToTarget(root, temp);
         System.out.println("Output: ");
-        System.out.println("Sum elements less than or equal to target: " + sum);
+        System.out.println("Sum elements less than or equal to target: " + temp[1]);
 
         /**
          * DFS Traversal
@@ -43,7 +42,7 @@ public class TraversalRecursionTechniques {
     }
 
     private static void postOrderTraversal(TreeNode root, List<Integer> resList) {
-        if(root == null){
+        if (root == null) {
             return;
         }
         preOrderTraversal(root.left, resList);
@@ -52,8 +51,8 @@ public class TraversalRecursionTechniques {
     }
 
     private static void preOrderTraversal(TreeNode root, List<Integer> resList) {
-        if(root == null){
-            return ;
+        if (root == null) {
+            return;
         }
         resList.add(root.val);
         preOrderTraversal(root.left, resList);
@@ -61,7 +60,7 @@ public class TraversalRecursionTechniques {
     }
 
     private static void inOrderTraversal(TreeNode root, List<Integer> resList) {
-        if(root == null){
+        if (root == null) {
             return;
         }
         inOrderTraversal(root.left, resList);
@@ -69,14 +68,14 @@ public class TraversalRecursionTechniques {
         inOrderTraversal(root.right, resList);
     }
 
-    private static void sumElementLessThanOrEqualToTarget(TreeNode root) {
-        if(root == null){
+    private static void sumElementLessThanOrEqualToTarget(TreeNode root, int[] temp) {
+        if (root == null) {
             return;
         }
-        sumElementLessThanOrEqualToTarget(root.left);
-        if(root.val <= target){
-            sum = sum + root.val;
+        sumElementLessThanOrEqualToTarget(root.left, temp);
+        if (root.val <= temp[0]) {
+            temp[1] = temp[1] + root.val;
         }
-        sumElementLessThanOrEqualToTarget(root.right);
+        sumElementLessThanOrEqualToTarget(root.right, temp);
     }
 }

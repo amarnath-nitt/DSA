@@ -7,7 +7,7 @@ import java.util.Stack;
 /**
  * @author amarnath-nitt 24/05/23
  */
-public class TraversalIterativeTechniques {
+public class IterativeTraversal {
     static int sum = 0;
     static int target = 3;
     public static void main(String[] args) {
