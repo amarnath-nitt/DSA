@@ -7,7 +7,8 @@ import java.util.Arrays;
  */
 public class BubbleSort {
     /**
-     * Bubble sort is a simple sorting algorithm that works by repeatedly swapping adjacent elements in a list or array if they are in the wrong order, until the list is sorted.
+     * Bubble sort is a simple sorting algorithm that works by repeatedly swapping adjacent elements in a list or array
+     * if they are in the wrong order, until the list is sorted.
      * Here's how it works:
      * Compare the first and second elements of the list.
      * If the first element is greater than the second element, swap them.
@@ -31,14 +32,15 @@ public class BubbleSort {
     private static void bubbleSort(int[] arr) {
         int n = arr.length;
         /**
-         * If there are n elements then number of pass will be (n-1). And in each pass of i number of iteration will be (n-i);
+         * If there are n elements then number of steps will be (n-1).
+         * And in each steps of step number of iteration will be (n-step);
          * */
-        for(int i=1; i<n; i++){
-            for(int j=0; j<(n-i); j++){
-                if(arr[j] > arr[j+1]){
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+        for(int step=1; step<n; step++){
+            for(int i=0; i<(n-step); i++){
+                if(arr[i] > arr[i+1]){
+                    int temp = arr[i];
+                    arr[i] = arr[i+1];
+                    arr[i+1] = temp;
                 }
             }
         }

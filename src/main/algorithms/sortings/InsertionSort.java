@@ -7,7 +7,8 @@ import java.util.Arrays;
  */
 public class InsertionSort {
     /**
-     * Insertion sort is a simple sorting algorithm that works by repeatedly inserting elements from an unsorted list into a sorted sub-list, until the entire list is sorted.
+     * Insertion sort is a simple sorting algorithm that works by repeatedly inserting elements from an unsorted list into a sorted sub-list,
+     * until the entire list is sorted.
      * Here's how it works:
      * Divide the list into two sub-lists: sorted and unsorted.
      * Initially, the sorted sub-list contains only the first element of the list.
@@ -15,7 +16,7 @@ public class InsertionSort {
      * Find the correct position for the current element in the sorted sub-list and shift the elements over to make room for the new element.
      * Insert the current element into the correct position in the sorted sub-list.
      * Repeat steps 3-5 until the entire list is sorted.
-     *  @TimeComplexity : O(n^2)
+     * @TimeComplexity : O(n^2)
      * @AuxillarySpace : O(1)
      * */
     public static void main(String[] args) {
