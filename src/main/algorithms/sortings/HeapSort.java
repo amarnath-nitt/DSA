@@ -7,7 +7,8 @@ import java.util.Arrays;
  */
 public class HeapSort {
     /**
-     * Heap Sort is another efficient sorting algorithm that works by creating a binary heap from the array or list to be sorted. Here are the steps to implement Heap Sort:
+     * Heap Sort is another efficient sorting algorithm that works by creating a binary heap from the array
+     * or list to be sorted. Here are the steps to implement Heap Sort:
      *
      * Build a max heap from the array or list. This involves rearranging the elements in the array so that they form a binary heap with the largest element at the root.
      * Swap the root node with the last node in the heap and reduce the heap size by one.
